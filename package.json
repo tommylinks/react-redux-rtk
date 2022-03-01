@@ -56,14 +56,12 @@
     "prettier": "2.5.1"
   },
   "lint-staged": {
-    "*.{ts,tsx}": [
-      "yarn dev:prettier",
-      "yarn dev:lint-fix",
-      "git add"
-    ],
-    "*.{html,css,sass,less,ejs}": [
+    "*.+(js|jsx|ts|tsx)": [
       "prettier --write",
-      "git add"
+      "eslint --fix"
+    ],
+    "*.+(html|json|css|md)": [
+      "prettier --write"
     ]
   }
 }
