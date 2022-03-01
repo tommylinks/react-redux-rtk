@@ -9,7 +9,7 @@
     "ecmaFeatures": {
       "jsx": true
     },
-    "ecmaVersion": "latest",
+    "ecmaVersion": 11,
     "sourceType": "module"
   },
   "plugins": ["react", "@typescript-eslint", "prettier"],
@@ -40,7 +40,7 @@
       "rules": {
         "prettier/prettier": "error",
         "react/jsx-filename-extension": [
-          1,
+          2,
           {
             "extensions": [".ts", ".tsx"]
           }
