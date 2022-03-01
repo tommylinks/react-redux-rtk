@@ -26,7 +26,8 @@
     "dev:prettier": "prettier --write .",
     "dev:prettier-check": "prettier --check .",
     "dev:lint-check": "npx eslint .",
-    "dev:lint-fix": "npx eslint --fix"
+    "dev:lint-fix": "npx eslint --fix",
+    "pre-commit": "lint-staged"
   },
   "browserslist": {
     "production": [
@@ -53,11 +54,6 @@
     "husky": "^7.0.4",
     "lint-staged": "^12.3.4",
     "prettier": "2.5.1"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
-    }
   },
   "lint-staged": {
     "*.{ts,tsx}": [
