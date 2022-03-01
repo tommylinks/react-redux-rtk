@@ -25,7 +25,8 @@
     "eject": "react-scripts eject",
     "dev:prettier": "prettier --write .",
     "dev:prettier-check": "prettier --check .",
-    "dev:lint-check": "npx eslint ."
+    "dev:lint-check": "npx eslint .",
+    "dev:lint-fix": "npx eslint --fix"
   },
   "husky": {
     "hooks": {
@@ -34,8 +35,8 @@
   },
   "lint-staged": {
     "*.{js,jsx,ts,tsx}": [
-      "prettier --write",
-      "eslint --fix",
+      "yarn dev:prettier",
+      "yarn dev:lint-fix",
       "git add"
     ],
     "*.{html,css,sass,less,ejs}": [
