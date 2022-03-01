@@ -23,11 +23,11 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "dev:prettier": "prettier --write .",
-    "dev:prettier-check": "prettier --check .",
-    "dev:lint-check": "npx eslint .",
-    "dev:lint-fix": "npx eslint --fix",
-    "pre-commit": "lint-staged"
+    "lint": "eslint . --ext js,jsx",
+    "lint:fix": "eslint . --ext js,jsx,ts,tsx --fix",
+    "format": "prettier --write \"**/*.+(js|jsx|ts|tsx|html|json|css|md)\"",
+    "pre-commit": "lint-staged",
+    "prepare": "husky install"
   },
   "browserslist": {
     "production": [
