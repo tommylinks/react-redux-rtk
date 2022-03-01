@@ -1,14 +1,14 @@
 import React from 'react';
-import logo from './logo.svg';
+import logo from '@assets/logo.svg';
 import './App.css';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
+      <header className="App-header 2">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
-          Edit 1 <code>src/App.tsx</code> and save to reload. 6
+          Edit 1 <code>src/App.tsx</code> and save to reload. s 3
         </p>
 
         <a
@@ -17,7 +17,7 @@ function App() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Learn React 3
+          Learn React
         </a>
       </header>
     </div>
