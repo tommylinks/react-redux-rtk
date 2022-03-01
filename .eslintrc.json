@@ -22,7 +22,7 @@
   },
   "rules": {
     "prettier/prettier": "error",
-    "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
+    "react/jsx-filename-extension": "off",
     "import/extensions": [
       "error",
       "ignorePackages",
@@ -33,29 +33,5 @@
         "tsx": "never"
       }
     ]
-  },
-  "overrides": [
-    {
-      "files": [".ts", ".tsx"],
-      "rules": {
-        "prettier/prettier": "error",
-        "react/jsx-filename-extension": [
-          2,
-          {
-            "extensions": [".ts", ".tsx"]
-          }
-        ],
-        "import/extensions": [
-          "error",
-          "ignorePackages",
-          {
-            "js": "never",
-            "jsx": "never",
-            "ts": "never",
-            "tsx": "never"
-          }
-        ]
-      }
-    }
-  ]
+  }
 }
