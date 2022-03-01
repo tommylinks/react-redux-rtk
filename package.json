@@ -28,22 +28,6 @@
     "dev:lint-check": "npx eslint .",
     "dev:lint-fix": "npx eslint --fix"
   },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
-    }
-  },
-  "lint-staged": {
-    "*.{js,jsx,ts,tsx}": [
-      "yarn dev:prettier",
-      "yarn dev:lint-fix",
-      "git add"
-    ],
-    "*.{html,css,sass,less,ejs}": [
-      "prettier --write",
-      "git add"
-    ]
-  },
   "browserslist": {
     "production": [
       ">0.2%",
@@ -69,5 +53,21 @@
     "husky": "^7.0.4",
     "lint-staged": "^12.3.4",
     "prettier": "2.5.1"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx}": [
+      "yarn dev:prettier",
+      "yarn dev:lint-fix",
+      "git add"
+    ],
+    "*.{html,css,sass,less,ejs}": [
+      "prettier --write",
+      "git add"
+    ]
   }
 }
