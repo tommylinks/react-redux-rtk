@@ -1,27 +1,25 @@
 import React from 'react';
-import logo from '@assets/logo.svg';
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  Navigate,
+} from 'react-router-dom';
 import './App.css';
+import DepositPage from './pages/deposit';
+import BorrowPage from './pages/borrow';
+import Layout from './layout';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header 2">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit 1 <code>src/App.tsx</code> and save to reload. s 5
-        </p>
-
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+const App = () => (
+  <Router>
+    <Layout>
+      <Routes>
+        <Route path="/deposit" element={<DepositPage />} />
+        <Route path="/borrow" element={<BorrowPage />} />
+        <Route path="*" element={<Navigate to="/deposit" />} />
+      </Routes>
+    </Layout>
+  </Router>
+);
 
 export default App;
